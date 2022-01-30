@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100vh;
+}
+body {
+    margin: 0;
+    background: radial-gradient(#FFBBC1, #C72B50);
+}
+
+.title {
+    font-family: Poppins, sans-serif;
+    font-size: 4em;
+    text-align: center;
+}

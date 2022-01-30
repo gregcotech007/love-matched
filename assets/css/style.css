@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins&display=swap");
 
 * {
     box-sizing: border-box;
@@ -13,7 +13,34 @@ body {
 }
 
 .title {
-    font-family: Poppins, sans-serif;
+    font-family: Open Sans, Helvitica, sans-serif;
     font-size: 4em;
+    font-weight: bolder;
     text-align: center;
+}
+
+.game-info-display {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.game-counters {
+    color: orange;
+    font-family: Poppins, Helvitica, sans-serif;
+    font-size: 2em;
+}
+
+.game-area {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
+    margin: 50px;
+    justify-content: center;
+}
+
+.card {
+    background-color: red;
+    height: 175px;
+    width: 125px;
 }

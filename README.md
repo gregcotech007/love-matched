@@ -1,108 +1,173 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Love Matched!
 
-Welcome gregcotech007,
+[View the Live Project here - Love Matched!](https://gregcotech007.github.io/love-matched/)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+The above game website was started as a result of my JavaScript Project. The purpose of the game is to show a level of understanding of a new language such a JavaScript.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## Table of Contents
+* [User Stories](#user-story)
+* [Design](#design)
+* [Features](#features)
+* [Languages](#languages)
+* [Programs](#programs)
+* [Testing](#testing)
+* [Deployment](#deployment)
+* [Cloning](#cloning)
+* [Credits](#credits)
+* [Conclusion](#conclusion)
 
-## Gitpod Reminders
+# User Experience (UX)
+## User Story
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### Intended Audience
+The intended audience for this game is to cater for users of all age groups from young to old. The purpose of the game is to provide interactive entertainment, test memory skills of what random cards they flipped, in order to match them together. 
 
-`python3 -m http.server`
+The user must complete all the card matches in the allocated time in order to win the game. The purpose of the game is to match all cards with the highest time remaining and with the least amount of card flips.
+ 
+### Realtime User Experience
+The user will open up the online game site for "Love Matched" from the link provided. The user will have the ability to play the game on smaller screens such as mobile devices or larger screens such as tablets or desktop computers.
 
-A blue button should appear to click: _Make Public_,
+On opening the page, the user is presented with an overlay called "Start Play". When the user clicks on the overlay text, the text disappears and the user is presented with the game area. 
 
-Another blue button should appear to click: _Open Browser_.
+The user is required to click on any random card, which flips over to reveal the back of the card. The card remains flipped until the user selects a second card. 
+Once two cards have been flipped, they are checked to see if they are matched to each other, if yes, they remained flipped and if not, they will flip back to display the front of the cards again and allows the user to try again.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Each time the user flips a card, the flips counter increases the counter. 
 
-A blue button should appear to click: _Make Public_,
+When the countdown timer reaches zero (0), the user is presented with overlay text that advises "GAME OVER!" and the user is provided the opportunity to play again, if they wish.
 
-Another blue button should appear to click: _Open Browser_.
+If the user completes all matches within the allocated time, the user is presented with overlay text as "WINNER!" and the user is provided the opportunity to play again, if they wish.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Realtime User Suggestions
+To further advance the game, I would suggest adding different challenge levels from easy, medium and difficult. 
+The easy level would remain at 90 seconds, while the medium level would have the time reduced by 30 seconds to 60 seconds. The difficult level would be reduced my 50 seconds to 40 seconds.
+In addition, the option the add a game player name to store their name and maintain a leader board of results.
 
-To log into the Heroku toolbelt CLI:
+# Design
+The design of the game consists of a title for the game which is centred at the top of the page. Below that, is the controls area which consists of a countdown timer and also a counter to count the card flips.  
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- Wireframes: [Balsamiq](https://balsamiq.com/)
+    - Mobile Device Wireframe.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+    ![Mobile Device Wireframe](assets/images/love-matched-mobile.png)
 
-------
+    - Desktop Device Wireframe.
 
-## Release History
+    ![Tablet Device Wireframe](assets/images/love-matched-tablet.png)
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- Colour Scheme
+    - I chose to use colours '#C72B50' (Valentines Red) on the outer webpage and then blending into a lighter colour of '#FFBBC1' (Valentines Pink). I have decided to go with '#C72B50' for the card front and '#FAD007' for the card back.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+- Typography
+    - The main font used on the website was Google Fonts: Poppins, .
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+- Font Icons
+    - The font icons used from Font Awesome and are loyalty-free.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+#  Features
+## - Title Area
+- Display game title to user with position as centered.
+## - Controls Area
+- Display a countime timer for the user to complete the win in the allocated time.
+- Display a flip counter to increment the amount of times that the cards have been flipped.
+- Countdown timer and flip counter are displayed in column view on a mobile device.
+- Countdown timer and flip counter are displayed in a row using Flex and 'space-between' view on a tablet or larger device.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+## - Game Area
+- User is presented 2 columns and 8 rows of cards on a mobile device.
+- User is presented 4 columns and 4 rows of cards on a tablet or larger desktop device.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+# Technology Used
+## - Languages
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+<img src="assets/images/html5.png" alt="html5" width="100px"/> 
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+<img src="assets/images/css3.png" alt="css3" width="72px"/>
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+<img src="assets/images/js.png" alt="js" width="72px"/>
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+## Programs
+- [GitHub](https://github.com/):
+    - GitHub was used to backup instances of GitPod Workspaces at intervals.
+- [GitPod](https://gitpod.io/):
+    - GitPod was used as the main Language Editor for programming the website.
+- [JavaScript](https://www.javascript.com/):
+    - JavaScipt was used to add function and interactivity to the game website.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+# Testing
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+## Bug Testing
+- A delay of 500ms was required after the user clicked to start the game in order to allow the cards to load before they can be clicked.
+- When a user flipped their first card, a click restriction was required to prevent them from clicking on the same card again while waiting on another card to check.
+- Also, the user should not be allowed to click on a matched card already and prevent it from flipping back and subsequently increasing the flips counter.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## HTML Validation
+- [Nu Html Checker](https://validator.w3.org/nu/#textarea):
+    - The website was used validate HTML code for any errors.
+## CSS Validation
+- [Nu Html Checker](http://www.css-validator.org/#validate_by_input):
+    - The website was used validate CSS styling code for any errors.
+## JS Validation
+- [JavaScript Checker](https://jshint.com/):
+    - The website was used validate JavaScript code for any errors.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+# Deployment
+For deployment of the website to a live publicly accessible website, the following steps were required:
+- Confirmed that correct repository is selected as 'love-matched'
+- Select 'Settings'
+- Scroll down to 'GitHub Pages' and click on 'Check it out here!'
+- On the 'Source' section, select Branch as 'main' and click on 'Save'.
+- Your site is published at https://gregcotech007.github.io/love-matched/
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+# Cloning
+To clone a copy of the code in the repository, the following steps are required:
+- Go to https://github.com and select the Repository called 'love-matched'
+- Click on the button called 'Code" and a pop-out window will show options to Clone through:
+    - HTTPS
+    - SSH
+    - GitHub CLI
+1. On GitHub.com, navigate to the main page of the repository.
+2. Above the list of files, click  Code.
+3. To clone the repository using HTTPS, under "Clone with HTTPS", click 'Clipboard to copy'. To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click Use SSH, then click 'Clipboard to copy'. To clone a repository using GitHub CLI, click Use GitHub CLI, then click 'Clipboard to copy'.
+4. Open Terminal.
+5. Change the current working directory to the location where you want the cloned directory.
+6. Type > git clone and then paste the URL you copied earlier. 
+    > $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+7. Press Enter to create your local clone.
+    > $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+    > Cloning into `Spoon-Knife`...
+    > remote: Counting objects: 10, done.
+    > remote: Compressing objects: 100% (8/8), done.
+    > remove: Total 10 (delta 1), reused 10 (delta 1)
+    > Unpacking objects: 100% (10/10), done.
+8. Repository Clone is now complete.
 
-------
+# Credits
 
-## FAQ about the uptime script
+## Tools & Images
+- [Google Fonts](https://fonts.google.com/):
+    - Google Fonts was imported into the css file to allow use of the following fonts: Open Sans & Poppins.
+- [Font Awesome](https://fontawesome.com/):
+    - Font Awesome was used to add Font Icons to improve the visual experience for the users.
+- [JS logo](https://www.pngitem.com/):
+    - JS logo was sourced from the png item website. Copyright-free for personal use.
+- [Web Dev Simplified](https://youtube.com/c/WebDevSimplified):
+    - Web Dev Simplified offered a great understanding of HTML & CSS.
+- [PortEXE](https://youtube.com/c/PortEXE):
+    - PortEXE offered a great understanding of JavaScript and explaining its functionality and use.
 
-**Why have you added this script?**
+## Tutorials & Resources
+- [GitHub: Clone a Repo](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+    - The link includes the full step-by-step instructions from GitHub Support on how to clone a repo.
+- [Code Institute](https://codeinstitute.net)
+    - The LMS tutorials were beneficial in giving me an insight into starting my first website coding project.
+    - Also, I found inspiration from the 'Love Running' project which helped with ideas.
+- Code Institute: Mentor: 
+    - Thanks to my Mentor who supported me through a oroject change of idea at short notice..
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+# Conclusion
+To be completed after project coding....
 
-**How will this affect me?**
+https://gregcotech007.github.io/love-matched/
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+Greg

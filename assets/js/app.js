@@ -13,7 +13,7 @@ class LoveMatched {
         this.cardsMatched = [];
         this.busy = true;
 
-
+        
     }
 
     cardFlip(card) {
@@ -25,7 +25,14 @@ class LoveMatched {
             //if statement
         }
     }
-
+    // Fisher Yates Shuffle Algorithm
+    cardsShuffle() {
+        for (let i = this.cardsArray.length -1; i > 0; i--) {
+            let cardRandom = Math.floor(Math.random() * (i+1));
+            this.cardsArray[cardRandom].style.order = i;
+            this.cardsArray[i].style.order = cardRandom;
+        }
+    }
 
     yesCardFlip(card) {
         return true;

@@ -61,7 +61,7 @@ class LoveMatched {
         this.winner();
     }
 
-    cardMismatched(card) {
+    cardMismatched(card1, card2) {
         this.busy = true;
         setTimeout(() => {
             card1.classList.remove('visible');
@@ -72,7 +72,7 @@ class LoveMatched {
 
     //Check card type image on each card, if 2 same, then matched
     checkCardType(card) {
-        //return card.getElementsByClassName(`<i class="fas fa-${cardArray[card-front)]}"></i>`);
+        console.log(card.children[1].classList[2]);
     }
 
     startCountdownTimer() {
@@ -112,7 +112,7 @@ class LoveMatched {
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('text-overlay'));
     let cards = Array.from(document.getElementsByClassName('card'));
-    let game = new LoveMatched(20, cards); //set to 20 seconds for testing
+    let game = new LoveMatched(90, cards);
 
     overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {

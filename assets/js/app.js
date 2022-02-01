@@ -65,7 +65,7 @@ class LoveMatched {
 
     yesCardFlip(card) {
         return true;
-        //return !this.busy && !this.matchedCards.includes(card) && card != this.cardToCheck;
+        //return !this.busy && !this.matchedCards.includes(card) && card != this.checkCard;
     }
 }
 

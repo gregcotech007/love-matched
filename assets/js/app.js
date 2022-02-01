@@ -36,8 +36,43 @@ class LoveMatched {
             this.ticker.innerText = this.clicksTotal;
             card.classList.add('visible');
 
-            //if statement
+            if(this.checkCard)
+                this.checkCardMatched(card);
+            else
+                this.checkCard = card;
         }
+    }
+
+    checkCardMatched(card) {
+        if (this.checkCardType(card) === this.checkCardType(this.checkCard))
+            this.cardMatched(card, this.checkCard);
+        else
+            this.cardMismatched(card);
+
+        this.checkCard = null;
+    }
+
+    cardMatched(card1, card2) {
+        this.cardsMatched.push(card1);
+        this.cardsMatched.push(card2);
+        card1.classList.add('matched');
+        card2.classList.add('matched');
+        if (this.cardsMatched.length === this.cardsArray.length)
+        this.winner();
+    }
+
+    cardMismatched(card) {
+        this.busy = true;
+        setTimeout(() => {
+            card1.classList.remove('visible');
+            card2.classList.remove('visible');
+            this.busy = false;
+        }, 1000);
+    }
+
+    //Check card type image on each card, if 2 same, then matched
+    checkCardType(card) {
+        //return card.getElementsByClassName(`<i class="fas fa-${cardArray[card-front)]}"></i>`);
     }
 
     startCountdownTimer() {
@@ -54,6 +89,11 @@ class LoveMatched {
         document.getElementById('text-GameOver').classList.add('visible');
     }
 
+    winner() {
+        clearInterval(this.countdownTimer);
+        document.getElementById('text-winner').classList.add('visible');
+    }
+
     // Fisher Yates Shuffle Algorithm
     cardsShuffle() {
         for (let i = this.cardsArray.length -1; i > 0; i--) {
@@ -64,15 +104,15 @@ class LoveMatched {
     }
 
     yesCardFlip(card) {
-        return true;
-        //return !this.busy && !this.matchedCards.includes(card) && card != this.checkCard;
+        //return true; // Set to true for testing purposes
+        return !this.busy && !this.cardsMatched.includes(card) && card != this.checkCard;
     }
 }
 
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('text-overlay'));
     let cards = Array.from(document.getElementsByClassName('card'));
-    let game = new LoveMatched(5, cards);
+    let game = new LoveMatched(20, cards); //set to 20 seconds for testing
 
     overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {

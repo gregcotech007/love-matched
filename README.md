@@ -119,6 +119,11 @@ For deployment of the website to a live publicly accessible website, the followi
 - On the 'Source' section, select Branch as 'main' and click on 'Save'.
 - Your site is published at https://gregcotech007.github.io/love-matched/
 
+## GitHub
+
+## Gitpod
+
+
 # Cloning
 To clone a copy of the code in the repository, the following steps are required:
 - Go to https://github.com and select the Repository called 'love-matched'
@@ -163,7 +168,7 @@ To clone a copy of the code in the repository, the following steps are required:
     - The LMS tutorials were beneficial in giving me an insight into starting my first website coding project.
     - Also, I found inspiration from the 'Love Running' project which helped with ideas.
 - Code Institute: Mentor: 
-    - Thanks to my Mentor who supported me through a oroject change of idea at short notice..
+    - Thanks to my Mentor who supported me through a project change of idea at short notice..
 
 # Conclusion
 To be completed after project coding....

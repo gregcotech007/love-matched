@@ -1,8 +1,8 @@
-# Love Matched!
+# Love Matched
 
-[View the Live Project here - Love Matched!](https://gregcotech007.github.io/love-matched/)
+[View the Live Project here - Love Matched](https://gregcotech007.github.io/love-matched/)
 
-The above game website was started as a result of my JavaScript Project. The purpose of the game is to show a level of understanding of a new language such a JavaScript.
+The game "Love Matched" is an online interactive game that provides fun, memory, time and flip challenges. 
 
 ## Table of Contents
 * [User Stories](#user-story)
@@ -14,7 +14,6 @@ The above game website was started as a result of my JavaScript Project. The pur
 * [Deployment](#deployment)
 * [Cloning](#cloning)
 * [Credits](#credits)
-* [Conclusion](#conclusion)
 
 # User Experience (UX)
 
@@ -26,20 +25,6 @@ The intended audience for this game is to cater for users of all age groups from
 The purpose of the game is to provide interactive entertainment, test memory skills of what random cards they flipped, in order to match them together. 
 
 The user must complete all the card matches in the allocated time in order to win the game. The purpose of the game is to match all cards with the highest time remaining and with the least amount of card flips.
- 
-### Realtime User Experience
-The user will open up the online game site for "Love Matched" from the link provided. The user will have the ability to play the game on smaller screens such as mobile devices or larger screens such as tablets or desktop computers.
-
-On opening the page, the user is presented with an overlay called "Start Play". When the user clicks on the overlay text, the text disappears and the user is presented with the game area. 
-
-The user is required to click on any random card, which flips over to reveal the back of the card. The card remains flipped until the user selects a second card. 
-Once two cards have been flipped, they are checked to see if they are matched to each other, if yes, they remained flipped and if not, they will flip back to display the front of the cards again and allows the user to try again.
-
-Each time the user flips a card, the flips counter increases the counter. 
-
-When the countdown timer reaches zero (0), the user is presented with overlay text that advises "GAME OVER!" and the user is provided the opportunity to play again, if they wish.
-
-If the user completes all matches within the allocated time, the user is presented with overlay text as "WINNER!" and the user is provided the opportunity to play again, if they wish.
 
 ### Realtime User Suggestions
 To further advance the game, I would suggest adding different challenge levels from easy, medium and difficult. 
@@ -52,25 +37,36 @@ The design of the game consists of a title for the game which is centred at the 
 - Wireframes: [Balsamiq](https://balsamiq.com/)
     - Mobile Device Wireframe.
 
-    ![Mobile Device Wireframe](assets/images/love-matched-mobile.png)
+    ![Mobile Device Wireframe](assets/images/lm-mobile.png)
 
     - Desktop Device Wireframe.
 
-    ![Tablet Device Wireframe](assets/images/love-matched-tablet.png)
+    ![Tablet Device Wireframe](assets/images/lm-tablet.png)
+
+- Screenshots:
+    - Title.
+    - Title with ticker and timer.
+    - Game cards.
+
+    ![Title](assets/images/lm-title.png)
+    ![Title Ticker Timer](assets/images/lm-title-counters.png)
+    ![Title](assets/images/lm-cards.png)
 
 - Colour Scheme
-    - I chose to use colours '#C72B50' (Valentines Red) on the outer webpage and then blending into a lighter colour of '#FFBBC1' (Valentines Pink). I have decided to go with '#C72B50' for the card front and '#FAD007' for the card back.
+    - I chose to use the following colour scheme.
+
+    ![Color Scheme](assets/images/lm-colors.png)
 
 - Typography
-    - The main font used on the website was Google Fonts: Poppins, .
+    - The main font used on the website was Google Fonts: Open Sans and Poppins.
 
 - Font Icons
-    - The font icons used from Font Awesome and are loyalty-free.
+    - The font icons used are from Font Awesome and are loyalty-free.
 
 #  Features
 ## - Title Area
 - Display game title to user with position as centered.
-## - Controls Area
+## - Controls Display Area
 - Display a countime timer for the user to complete the win in the allocated time.
 - Display a flip counter to increment the amount of times that the cards have been flipped.
 - Countdown timer and flip counter are displayed in column view on a mobile device.
@@ -98,8 +94,30 @@ The design of the game consists of a title for the game which is centred at the 
     - JavaScipt was used to add function and interactivity to the game website.
 
 # Testing
+## Devices used
+### iMac Computer
+- The game was tested on an iMac using Chrome Desktop browser. The game remained responsive at full screen showing 4 x 4 card layout with the countdown timer and flips counter set to space evenly.
+- When screen size was reduced down less that 625px, the layout changes to 2 x 8 cards. Also the countdown time and flips counter view is changed to stack on top of each other.
 
-## Test Cases
+<img src="assets/images/lm-desktop-startGame.png" width="250px"/>
+<img src="assets/images/lm-desktop-gameOver.png" width="250px"/>
+
+<img src="assets/images/lm-desktop-winner.png" width="250px"/>
+
+
+### iPhone 13 Pro Max  (Mobile Device)
+- The test on iPhone using the Safari, Chrome and Firefox proved to be unsuccessful. The page loaded up with the Start Game overlay and showing all cards flipped in the background.
+Suggested update on next release. 
+
+### OnePlus (Mobile Device)
+- The test on OnePlus proved to be a success in both portrait and landscape mode.
+
+<img src="assets/images/lm-mobile-OnePlus-startGame.jpg" width="240px"/>
+<img src="assets/images/lm-mobile-OnePlus-gameStarted.jpg" width="240px"/>
+
+<img src="assets/images/lm-mobile-OnePlus-gameLandscape.jpg" width="240px"/>
+
+## User Test Case
 
 ### Step One
 - On loading the game page, the user is presented with the gamme overlay of "Start Game".
@@ -121,28 +139,30 @@ The design of the game consists of a title for the game which is centred at the 
 - The user has the option of clicking to start a new game.
 - If the user starts a new game, the cards, countdown timer and flips counter are reset to default.
 
-### Step Five
-- If the user
-
-## Bug Testing
+### Restrictions for User
 - A delay of 500ms was required after the user clicked to start the game in order to allow the cards to load before they can be clicked.
 - When a user flipped their first card, a click restriction was required to prevent them from clicking on the same card again while waiting on another card to check.
 - Also, the user should not be allowed to click on a matched card already and prevent it from flipping back and subsequently increasing the flips counter.
 
+## Bug Testing
+Some bugs that were found during testing was the ability for the game to display and play correctly on other browsers such as Safari and Firefox. They are documented as a fix for the next version release.
+
 ## HTML Validation
 - [Nu Html Checker](https://validator.w3.org/nu/#textarea):
     - The website was used validate HTML code for any errors.
-### HTML Validation Results (Image)
+
+<img src="assets/images/lm-Nu-HTML-Checker-passed-min.png" width="250px"/>
 
 ## CSS Validation
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator#css):
     - The website was used validate CSS styling code for any errors.
-### CSS Validation Results (Image)
+
+<img src="assets/images/lm-W3C-CSS-Validator-passed-min.png" width="250px"/>
 
 ## JS Validation
 - [JavaScript Validation](https://jshint.com/):
     - The website was used validate JavaScript code for any errors.
-### JS Validation Results (Image)
+<img src="assets/images/lm-jsHint-Validator-min.png"/>
 
 # Deployment
 
@@ -194,25 +214,22 @@ To clone a copy of the code in the repository, the following steps are required:
     - Font Awesome was used to add Font Icons to improve the visual experience for the users.
 - [JS logo](https://www.pngitem.com/):
     - JS logo was sourced from the png item website. Copyright-free for personal use.
-- [Web Dev Simplified](https://youtube.com/c/WebDevSimplified):
-    - Web Dev Simplified offered a great understanding of HTML & CSS.
-- [PortEXE](https://youtube.com/c/PortEXE):
-    - PortEXE offered a great understanding of JavaScript and explaining its functionality and use.
+- [Coolors](https://coolors.co):
+    - Coolors is a palette generator that I used to display the colors I used.
+- [Compress PNG](https://compresspng.com/):
+    - Compress PNG was used to reduce the file size of the png files.
 
 ## Tutorials & Resources
 - [GitHub: Clone a Repo](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
     - The link includes the full step-by-step instructions from GitHub Support on how to clone a repo.
 - [Fisher Yates Shuffle](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle)   
     - The Fisher–Yates shuffle is an algorithm for generating a random permutation of a finite sequence
+- [Web Dev Simplified](https://youtube.com/c/WebDevSimplified):
+    - Web Dev Simplified's tutorial offered different possibilties and understanding of HTML & CSS.
+- [PortEXE](https://youtube.com/c/PortEXE):
+    - PortEXE's tutorial offered a greater understanding of JavaScript and explaining its functionality and use.
 - [Code Institute](https://codeinstitute.net)
     - The LMS tutorials were beneficial in giving me an insight into starting my first website coding project.
     - Also, I found inspiration from the 'Love Running' project which helped with ideas.
 - Code Institute: Mentor: 
-    - Thanks to my Mentor who supported me through a project change of idea at short notice..
-
-# Conclusion
-To be completed after project coding....
-
-https://gregcotech007.github.io/love-matched/
-
-Greg
+    - Thanks to my Mentor who supported me through a project change of idea at short notice.

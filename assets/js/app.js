@@ -151,6 +151,7 @@ class LoveMatched {
 
 /** @function
  * @name yesCardFlip
+ * @returns {Boolean}
  */
 	yesCardFlip(card) {
 		return !this.busy && !this.cardsMatched.includes(card) && card != this.checkCard;
@@ -159,6 +160,7 @@ class LoveMatched {
 
 /** @function
  * @name ready
+ * @type {EventListener}
  */
 function ready() {
 	let overlays = Array.from(document.getElementsByClassName('text-overlay'));
@@ -178,5 +180,5 @@ function ready() {
 	});
 }
 
-/** @type {DOMContentLoaded} */
+/** @type {EventListener} */
 document.addEventListener('DOMContentLoaded', ready());

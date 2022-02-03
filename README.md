@@ -17,10 +17,13 @@ The above game website was started as a result of my JavaScript Project. The pur
 * [Conclusion](#conclusion)
 
 # User Experience (UX)
+
 ## User Story
 
 ### Intended Audience
-The intended audience for this game is to cater for users of all age groups from young to old. The purpose of the game is to provide interactive entertainment, test memory skills of what random cards they flipped, in order to match them together. 
+The intended audience for this game is to cater for users of all age groups from young to old. Children aged (4+) and adults of all ages.
+
+The purpose of the game is to provide interactive entertainment, test memory skills of what random cards they flipped, in order to match them together. 
 
 The user must complete all the card matches in the allocated time in order to win the game. The purpose of the game is to match all cards with the highest time remaining and with the least amount of card flips.
  
@@ -96,6 +99,31 @@ The design of the game consists of a title for the game which is centred at the 
 
 # Testing
 
+## Test Cases
+
+### Step One
+- On loading the game page, the user is presented with the gamme overlay of "Start Game".
+- User selects "Start Game" and the overlay is removed and the user has access to the cards to click on.
+
+### Step Two
+- The countdown timer is initiated after the first card is clicked on and starts counting down from 90 seconds.
+- The user clicks first card to reveal that icon.
+- As this is the first card that the user clicks on, this becomes the current card that the second card will be checked against.
+
+### Step Three
+- The user needs to click on a 2nd card to reveal the icon.
+- Both cards are then checked against each other for a match. If matched, both cards remain flipped.
+- If cards are not matched, then they will flip back to front card and allowed to proceed with the game.
+
+### Step Four
+- The user needs match all the card pairs within the allocated countdown time of 90 seconds.
+- If all cards are not matched when timer reaches zero, the user is presented with a screen overlay of "Game Over".
+- The user has the option of clicking to start a new game.
+- If the user starts a new game, the cards, countdown timer and flips counter are reset to default.
+
+### Step Five
+- If the user
+
 ## Bug Testing
 - A delay of 500ms was required after the user clicked to start the game in order to allow the cards to load before they can be clicked.
 - When a user flipped their first card, a click restriction was required to prevent them from clicking on the same card again while waiting on another card to check.
@@ -104,14 +132,21 @@ The design of the game consists of a title for the game which is centred at the 
 ## HTML Validation
 - [Nu Html Checker](https://validator.w3.org/nu/#textarea):
     - The website was used validate HTML code for any errors.
+### HTML Validation Results (Image)
+
 ## CSS Validation
-- [Nu Html Checker](http://www.css-validator.org/#validate_by_input):
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator#css):
     - The website was used validate CSS styling code for any errors.
+### CSS Validation Results (Image)
+
 ## JS Validation
-- [JavaScript Checker](https://jshint.com/):
+- [JavaScript Validation](https://jshint.com/):
     - The website was used validate JavaScript code for any errors.
+### JS Validation Results (Image)
 
 # Deployment
+
+## GitHub
 For deployment of the website to a live publicly accessible website, the following steps were required:
 - Confirmed that correct repository is selected as 'love-matched'
 - Select 'Settings'
@@ -119,9 +154,12 @@ For deployment of the website to a live publicly accessible website, the followi
 - On the 'Source' section, select Branch as 'main' and click on 'Save'.
 - Your site is published at https://gregcotech007.github.io/love-matched/
 
-## GitHub
-
 ## Gitpod
+For deployment of the website to a local environment, the following steps were required:
+- Confirmed that correct repository is selected as 'love-matched'
+- To run a new Python server, open a terminal window and type the following code and hit enter:
+    - python3 -m http.server
+- Once the Python server is running, you will be prompted to open a browser on port 8000 to show the output.
 
 
 # Cloning
@@ -164,6 +202,8 @@ To clone a copy of the code in the repository, the following steps are required:
 ## Tutorials & Resources
 - [GitHub: Clone a Repo](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
     - The link includes the full step-by-step instructions from GitHub Support on how to clone a repo.
+- [Fisher Yates Shuffle](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle)   
+    - The Fisher–Yates shuffle is an algorithm for generating a random permutation of a finite sequence
 - [Code Institute](https://codeinstitute.net)
     - The LMS tutorials were beneficial in giving me an insight into starting my first website coding project.
     - Also, I found inspiration from the 'Love Running' project which helped with ideas.

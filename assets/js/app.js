@@ -1,3 +1,7 @@
+/**
+ * @constructs LoveMatched
+ * @param timeTotal, cards
+ */
 class LoveMatched {
 	constructor(timeTotal, cards) {
 		this.cardsArray = cards;
@@ -7,6 +11,18 @@ class LoveMatched {
 		this.ticker = document.getElementById('flipCount');
 	}
 
+/** @function
+ * @name gameStart
+ * @this gameStart#checkCard
+ * @this gameStart#clicksTotal
+ * @this gameStart#timeRem
+ * @this gameStart#timeTotal
+ * @this gameStart#cardsMatched
+ * @this gameStart#cardsShuffle
+ * @this gameStart#countdownTimer
+ * @this gameStart#startCountdownTimer
+ * @this gameStart#hideCards
+ */
 	gameStart() {
 		this.checkCard = null;
 		this.clicksTotal = 0;
@@ -24,11 +40,15 @@ class LoveMatched {
 		this.ticker.innerText = this.clicksTotal;
 	}
 
+/** @function
+ * @name hideCards
+ * @name cardFlip
+ */
 	hideCards() {
 		this.cardsArray.forEach(card => {
 			card.classList.remove('visible');
 			card.classList.remove('matched');
-		})
+		});
 	}
 
 	cardFlip(card) {
@@ -43,6 +63,9 @@ class LoveMatched {
 		}
 	}
 
+/** @function
+ * @name checkCardMatched
+ */
 	checkCardMatched(card) {
 		if (this.checkCardType(card) === this.checkCardType(this.checkCard))
 			this.cardMatched(card, this.checkCard);
@@ -51,6 +74,9 @@ class LoveMatched {
 		this.checkCard = null;
 	}
 
+/** @function
+ * @name cardMatched
+ */
 	cardMatched(card1, card2) {
 		this.cardsMatched.push(card1);
 		this.cardsMatched.push(card2);
@@ -60,6 +86,9 @@ class LoveMatched {
 			this.winner();
 	}
 
+/** @function
+ * @name cardMismatched
+ */
 	cardMismatched(card1, card2) {
 		this.busy = true;
 		setTimeout(() => {
@@ -68,10 +97,21 @@ class LoveMatched {
 			this.busy = false;
 		}, 1000);
 	}
-
+	
+/** @function
+ * @name checkCardType
+ * @name startCountdownTimer
+ * @returns {string}
+ */
 	checkCardType(card) {
 		return document.getElementsByClassName(card.children[1].classList[2]);
 	}
+
+/** @function
+ * @name checkCardType
+ * @name startCountdownTimer
+ * @returns {number}
+ */
 	startCountdownTimer() {
 		return setInterval(() => {
 			this.timeRem--;
@@ -80,15 +120,27 @@ class LoveMatched {
 				this.gameOver();
 		}, 1000);
 	}
+
+/** @function
+ * @name gameOver
+ */
 	gameOver() {
 		clearInterval(this.countdownTimer);
 		document.getElementById('text-GameOver').classList.add('visible');
 	}
+
+/** @function
+ * @name winner
+ */
 	winner() {
 		clearInterval(this.countdownTimer);
 		document.getElementById('text-winner').classList.add('visible');
 	}
-	// Fisher Yates Shuffle Algorithm
+
+/** @function
+ * @name cardsShuffle
+ * @author Fisher Yates
+ */
 	cardsShuffle() {
 		for (let i = this.cardsArray.length - 1; i > 0; i--) {
 			let cardRandom = Math.floor(Math.random() * (i + 1));
@@ -96,11 +148,18 @@ class LoveMatched {
 			this.cardsArray[i].style.order = cardRandom;
 		}
 	}
+
+/** @function
+ * @name yesCardFlip
+ */
 	yesCardFlip(card) {
 		return !this.busy && !this.cardsMatched.includes(card) && card != this.checkCard;
 	}
 }
 
+/** @function
+ * @name ready
+ */
 function ready() {
 	let overlays = Array.from(document.getElementsByClassName('text-overlay'));
 	let cards = Array.from(document.getElementsByClassName('card'));
@@ -111,11 +170,13 @@ function ready() {
 			game.gameStart();
 		});
 	});
+
 	cards.forEach(card => {
 		card.addEventListener('click', () => {
 			game.cardFlip(card);
-		})
-	})
+		});
+	});
 }
 
+/** @type {DOMContentLoaded} */
 document.addEventListener('DOMContentLoaded', ready());
